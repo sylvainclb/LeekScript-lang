@@ -1,0 +1,25 @@
+{
+    "name": "leekscript-lang",
+    "displayName": "LeekScript-lang",
+    "description": "This is an extension to have the support of LeekScript in VSCode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "leekscript",
+            "aliases": ["LeekScript", "leekscript"],
+            "extensions": [".leek",".ls"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "leekscript",
+            "scopeName": "source.leek",
+            "path": "./syntaxes/leekscript.tmLanguage.json"
+        }]
+    }
+}
