@@ -7,13 +7,20 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+		,
+		{
+			"include": "#operators"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.leekscript",
-				"match": "\\b(abstract|arguments|await|break|byte|case|catch|char|class|const|constructor|continue|default|do|double|else|enum|eval|export|extends|false|final|finally|float|for|function|goto|if|implements|import|in|instanceof|int|interface|let|long|native|new|null|package|private|protected|public|return|short|static|super|switch|synchronized|this|throw|throws|transient|true|try|typeof|var|void|volatile|while|with|yield)\\b"
+				"match": "\\b(global|abstract|arguments|await|break|byte|case|catch|char|class|const|constructor|continue|default|do|double|else|enum|eval|export|extends|false|final|finally|float|for|function|goto|if|implements|import|in|instanceof|int|interface|let|long|native|new|null|package|private|protected|public|return|short|static|super|switch|synchronized|this|throw|throws|transient|true|try|typeof|var|void|volatile|while|with|yield)\\b"
 			}]
 		},
 		"strings": {
@@ -26,7 +33,60 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+            "patterns": [{
+                "name": "comment.line.leekscript",
+                "match": "//.*"
+            }]
+        },
+		"operators": {
+            "patterns": [
+				{
+					"match": "(\\*|&)(?=\\w)",
+					"name": "keyword.operator.address.leekscript"
+				},
+				{
+					"match": "<\\-",
+					"name": "keyword.operator.channel.leekscript"
+				},
+				{
+					"match": "\\-\\-",
+					"name": "keyword.operator.decrement.leekscript"
+				},
+				{
+					"match": "\\+\\+",
+					"name": "keyword.operator.increment.leekscript"
+				},
+				{
+					"match": "(==|!=|<=|>=|<(?!<)|>(?!>))",
+					"name": "keyword.operator.comparison.leekscript"
+				},
+				{
+					"match": "(&&|\\|\\||!)",
+					"name": "keyword.operator.logical.leekscript"
+				},
+				{
+					"match": "(=|\\+=|\\-=|\\|=|\\^=|\\*=|/=|:=|%=|<<=|>>=|&\\^=|&=)",
+					"name": "keyword.operator.assignment.leekscript"
+				},
+				{
+					"match": "(\\+|\\-|\\*|/|%)",
+					"name": "keyword.operator.arithmetic.leekscript"
+				},
+				{
+					"match": "(&(?!\\^)|\\||\\^|&\\^|<<|>>)",
+					"name": "keyword.operator.arithmetic.bitwise.leekscript"
+				},
+				{
+					"match": "\\.\\.\\.",
+					"name": "keyword.operator.ellipsis.leekscript"
+				}
+			]
 		}
 	},
-	"scopeName": "source.leek"
+	"scopeName": "source.leek",
+	"embeddedLanguages": {
+		"meta.embedded.block.javascript": "javascript"
+	  }
 }
