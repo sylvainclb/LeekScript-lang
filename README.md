@@ -7,8 +7,8 @@ This extension "leekscript-lang" is destined to add syntax and sematic support o
 ## Features
 
 Support of :
--   LeekScript keywords
--   LeekScript syntax
+- LeekScript keywords
+- LeekScript syntax
 
 ## Requirements
 
@@ -25,8 +25,8 @@ None.
 ## Release Notes
 
 Alpha version:
--   Support of LeekScript keywords
--   Support of LeekScript syntax
+- Support of LeekScript keywords
+- Support of LeekScript syntax
 
 ### 0.1.0
 
